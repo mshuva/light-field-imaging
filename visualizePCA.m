@@ -3,7 +3,7 @@ function [u1] = visualizePCA(A)
 figure
 plot(A(1,:),A(2,:),'redo'); 
 hold on 
-[U,S,V] = svd(A-repmat(mean(A,2),1,m)); 
+[U,S,V] = svds(A-repmat(mean(A,2),1,m),3); 
 line([0 U(1,1)], [0 U(2,1)],'LineWidth',2); 
 axis equal 
 u1 = U(:,1);

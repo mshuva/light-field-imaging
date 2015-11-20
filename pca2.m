@@ -15,7 +15,7 @@ data = data - repmat(mn,1,N);
 Y = data' / sqrt(N-1);
 
 % SVD does it all
-[u,S,PC] = svd(Y);
+[u,S,PC] = svds(Y,3);
 
 % calculate the variances
 S = diag(S);
