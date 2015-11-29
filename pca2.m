@@ -23,3 +23,4 @@ V = S .* S;
 
 % project the original data
 signals = PC' * data;
+plot3(signals(1,:),signals(2,:),signals(3,:),'.');

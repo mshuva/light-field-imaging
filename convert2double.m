@@ -3,7 +3,8 @@
 
 function imDouble = convert2double(image_array)
 	for i = 1:length(image_array)
-	    image2D = im2double(rgb2gray(image_array{i}));
-        imDouble{i}= imresize(image2D,0.25);
+% 	    image = im2double(rgb2gray(image_array{i})); % convert to grayscale
+        image = im2double(image_array{i});
+        imDouble{i}= imresize(image,0.25);
 	end
 end
